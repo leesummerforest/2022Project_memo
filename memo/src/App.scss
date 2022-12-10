@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+.MEMO { width:100%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    cursor: default;
+
+     .memoCenter{max-width:940px;
+        width: 100%;
+        height: 550px;
+        background-color: white;
+        display: flex;
+
+        .memolist{
+            background-color: #f2f7ff;
+            .memolist_width{
+                padding:20px;
+                .main_t{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 20px;
+                    .main_t_memo{font-size:25px;
+                    font-weight: 700;}
+                    .main_t_add{cursor: pointer; width: 38px;
+                        img{width: 100%;  padding-top:9px;}
+                    }
+                }
+
+                .search{background-color: #dfe9fa;
+                    
+                    border-radius: 8px;
+                    width: 260px;
+                    cursor:auto;
+                    margin-top:10px;
+                    .search_text{padding:5px 10px; display: flex;
+                        .search_text_icon{width: 15px;
+                            .search_img{width: 100%;}}
+                        .search_text_text{font-size:14px; color:#a0b2d0; border:none; background-color: #dfe9fa;}
+                        .search_text_text::placeholder{font-size:14px; color:#a0b2d0;font-family: 'Noto Sans KR', sans-serif;
+                        }
+                        .search_text_text:focus{outline:none;}
+                    }
+                }
+            .memolist{
+                overflow: auto;
+                height: 360px;
+                margin-top: 10px;
+                .memolist_save{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    cursor: pointer;
+                    .nomemo{
+                        font-size: 22px;
+                        color:#a0b2d0;
+                        text-align: center;
+                        margin-top: 160px;
+                    }    
+                    .memo_save_click{
+                        border-radius: 8px;
+                        background-color: #4081FF;
+                        color:white;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top:7px;
+                        width:259px;
+                        .memo_save_title{cursor: pointer; padding:10px;
+                            .memo_save_real_title{font-size:13px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis; width:230px;}
+                            .memo_save_date{font-size: 10px;
+                                color:#b0cbff;}
+                        }
+                        .memo_save_correction{
+                            color:#cacaca;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                                .trash_little{
+                                    display:none;
+                                    width:20px;
+                                    img{width: 100%;}
+                                }
+                                .edit_little{
+                                    display:none;
+                                    width:20px;
+                                    img{width: 100%;}
+                                }
+                        }
+                       
+                    }
+
+                    .memo_save_unclick{
+                        
+                        border-radius: 8px;
+                        background-color: white;
+                        color:black;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top:7px;
+                        width:259px;
+                        .memo_save_title{cursor: pointer; padding:10px;/*width:200px;*/
+                            .memo_save_real_title{font-size:13px; font-weight: 700;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis; width:230px;}
+                            .memo_save_date{font-size: 10px;
+                            color:#bbb;}
+                        }
+                        .memo_save_correction{
+                            color:#cacaca;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            .trash_little{
+                                width:20px;
+                                display:none;
+                                img{width: 100%;}
+                            }
+                            .edit_little{
+                                width:20px;
+                                display:none;
+                                img{width: 100%;}
+                            }
+                            
+                        
+                        }
+                    }
+                }
+            }
+            .memolist:focus{outline: none;}
+            .memolist::-webkit-scrollbar {
+                width: 5px;
+              }
+            .memolist::-webkit-scrollbar-thumb {
+                background-color: #dddddd;
+                border-radius: 8px;
+                background-clip: padding-box;
+              }
+            .memolist::-webkit-scrollbar-track {
+                background-color: #f2f7ff;
+                border-radius: 8px;
+              }
+
+                .memoNumber{
+                    font-size: 10px;
+                    text-align: center;
+                    margin-top: 10px;
+                    color: #a0b2d0;
+                }
+            }
+        }
+
+
+        .memowrite{
+            width: 100%;
+            position:relative;
+          .memowrite_width{
+            padding:40px;
+            .memowrite_icon{
+                width: 100%;
+                text-align: right;
+                padding-top:9px;
+                display: inline-block;
+                span{
+                    margin-left: 15px;
+                    cursor: pointer;
+                    img{width: 5%;}
+                }
+                .trash{display: none;}
+                .edit{display: none;}
+
+            }
+
+            .memowrite_part{display: flex;
+                flex-direction: column;
+                .memowrite_title{
+                    font-size: 22px;
+                    border: none;
+                    margin-top: 10px;
+                    white-space: normal;
+                    word-break: break-all;
+                }
+                .memowrite_title::placeholder{color:black; font-family: 'Noto Sans KR', sans-serif;
+                }
+                .memowrite_title:focus{outline: none;}
+                .memowrite_title:disabled {
+                    background: #fff;
+                    color:#4081FF;
+                  }
+                .memowrite_detail{
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-top:20px ;
+                    color:#818181;
+                    line-height: 22px;
+                    border: none;
+                    height: 380px;
+                    font-family: 'Noto Sans KR', sans-serif;
+                    overflow: auto;
+                    width: 100%;
+                    resize: none;
+                }
+                .memowrite_detail:disabled {
+                    background: #fff;
+                  }
+                .memowrite_detail::placeholder{
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-top:20px ;
+                    color:#bbb;
+                    line-height: 22px;
+                    font-family: 'Noto Sans KR', sans-serif;}
+                .memowrite_detail:focus{outline: none;}
+                .memowrite_detail::-webkit-scrollbar {
+                    width: 8px;
+                  }
+                  .memowrite_detail::-webkit-scrollbar-thumb {
+                    background-color: #dddddd;
+                    border-radius: 8px;
+                    background-clip: padding-box;
+                  }
+                  .memowrite_detail::-webkit-scrollbar-track {
+                    background-color: #fff;
+                    border-radius: 8px;
+                  }
+
+            }
+            }
+        }    
+
+    }
+}
+    
+
+
+
+
